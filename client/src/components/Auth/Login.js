@@ -21,6 +21,7 @@ const Login = ({ classes }) => {
 
       const { me } = await client.request(ME_QUERY); // ask for current User data AFTER user logs in
       dispatch({ type: 'LOGIN_USER', payload: me });
+      dispatch({ type: 'IS_LOGGED_IN', payload: googleUser.isSignedIn() });
     } catch (err) {
       onFailure(err);
     }
