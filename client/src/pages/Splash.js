@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
+import { Redirect } from 'react-router-dom';
+
 import Context from '../context';
 import Login from '../components/Auth/Login';
 
-import { Redirect } from 'react-router-dom';
 
 const Splash = () => {
   const { state } = useContext(Context);
