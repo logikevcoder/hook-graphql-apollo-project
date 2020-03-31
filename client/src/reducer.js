@@ -1,7 +1,8 @@
-export default function reducer(state, action) {
-  switch (action.type) {
+export default function reducer(state, { type, payload }) {
+  // destructure these 2 props off action
+  switch (type) {
     case 'LOGIN_USER':
-      return { ...state, currentUser: action.payload };
+      return { ...state, currentUser: payload };
     default:
       return state;
   }
